@@ -1,4 +1,4 @@
-import * as layout from "../components/layout.svelte";
+import * as layout from "../../../src/routes/$layout.svelte";
 
 const components = [
 	() => import("../../../src/routes/index.svelte")

@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+/build
+/.svelte
 config.dev.js
 
 # local env files
