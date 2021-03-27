@@ -2,6 +2,7 @@
 node_modules
 /dist
 /build
+/.vercel_build_output
 /.svelte
 config.dev.js
 

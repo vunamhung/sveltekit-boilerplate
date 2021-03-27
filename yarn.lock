@@ -93,6 +93,11 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-node/-/adapter-node-1.0.0-next.10.tgz#7ad40673bc79c3dd585983743132c83714c8cb4a"
   integrity sha512-v62a9nQguK53ldwBp4FizvwW1Kh2wOZBjJKGlnZFhO9e1Z/LoIqR9LH5dVHz9d5K19or5ap3hRdS91WkkDgu4w==
 
+"@sveltejs/adapter-vercel@next":
+  version "1.0.0-next.8"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.8.tgz#61a32e02d1b46e8f8e99e28d1ce1892553f38346"
+  integrity sha512-bclTDgJIDt17QRdq+u4CqdsQO08MXYhqdlr7O7LcCMWf8PWS5N0l9ValJbKAFcXD5xseqRF9YtUkHKAxMjS54Q==
+
 "@sveltejs/kit@next":
   version "1.0.0-next.60"
   resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.60.tgz#bd7dea4f26012648254ca05b8a17f669deedecfe"
