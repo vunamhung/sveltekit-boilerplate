@@ -1,6 +1,7 @@
 const sveltePreprocess = require('svelte-preprocess');
 const vercel = require('@sveltejs/adapter-vercel');
 const pkg = require('./package.json');
+const { resolve } = require("path");
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
@@ -18,6 +19,12 @@ module.exports = {
     vite: {
       ssr: {
         noExternal: Object.keys(pkg.dependencies || {})
+      },
+      resolve: {
+        alias: {
+          $components: resolve(__dirname, './src/components'),
+          $stores: resolve(__dirname, './src/stores')
+        }
       }
     }
   }
