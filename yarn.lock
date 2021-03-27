@@ -2059,6 +2059,11 @@ postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.7:
     nanoid "^3.1.20"
     source-map "^0.6.1"
 
+praecox-datepicker@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/praecox-datepicker/-/praecox-datepicker-1.0.4.tgz#77430e68a8192286ef6f37291bcab683d3b0d4da"
+  integrity sha512-BV4PpRpurKWW2nQEWyuT8ZkVyiAaEAoTPw/Bv8EipCW/6ShUbJfqaPj0sjsa4CXYzSIDQTE2/pnSX5qEWLmbGg==
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
