@@ -32,3 +32,17 @@
     @apply font-bold;
   }
 }
+
+@layer components {
+  .overlay {
+    @apply before:empty-content before:rounded-xl before:bg-black before:inset-0 before:absolute before:bg-opacity-50;
+  }
+}
+
+@layer utilities {
+  @variants before, after {
+    .empty-content {
+      content: '';
+    }
+  }
+}
