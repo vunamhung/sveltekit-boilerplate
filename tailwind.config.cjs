@@ -1,4 +1,3 @@
-const plugin = require('tailwindcss/plugin');
 const { tailwindExtractor } = require('tailwindcss/lib/lib/purgeUnusedStyles');
 
 module.exports = {
@@ -76,25 +75,5 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/aspect-ratio'),
-    plugin(({ addUtilities }) => {
-      addUtilities(
-        {
-          '.col-span-full': {
-            'grid-column': '1 / -1'
-          },
-          '.flex-2': {
-            flex: '2 1 0'
-          },
-          '.flex-3': {
-            flex: '3 1 0'
-          }
-        },
-        ['responsive']
-      );
-    })
-  ]
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp'), require('@tailwindcss/aspect-ratio')]
 };
