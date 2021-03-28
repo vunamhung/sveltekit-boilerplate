@@ -23,12 +23,12 @@ module.exports = {
           sm: '100%',
           md: '640px',
           lg: '960px',
-          xl: '1220px',
-        },
+          xl: '1220px'
+        }
       },
       screens: {
         dlg: { max: '1023px' },
-        dmd: { max: '767px' },
+        dmd: { max: '767px' }
       },
       maxWidth: {
         'min-content': 'min-content',
@@ -41,7 +41,7 @@ module.exports = {
         '1/5': '20%',
         '2/5': '40%',
         '3/5': '60%',
-        '4/5': '80%',
+        '4/5': '80%'
       },
       maxHeight: {
         '1/2': '50%',
@@ -52,7 +52,7 @@ module.exports = {
         '1/5': '20%',
         '2/5': '40%',
         '3/5': '60%',
-        '4/5': '80%',
+        '4/5': '80%'
       },
       minWidth: {
         'min-content': 'min-content',
@@ -60,7 +60,7 @@ module.exports = {
         '1/4': '25%',
         '1/2': '50%',
         '3/4': '75%',
-        '4/5': '80%',
+        '4/5': '80%'
       },
       minHeight: {
         'min-content': 'min-content',
@@ -68,13 +68,13 @@ module.exports = {
         '1/4': '25vh',
         '1/2': '50vh',
         '3/4': '75vh',
-        '4/5': '80vh',
+        '4/5': '80vh'
       },
       inset: {
         '1/2': '50%',
-        '-1/2': '-50%',
-      },
-    },
+        '-1/2': '-50%'
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),
@@ -90,7 +90,7 @@ module.exports = {
               return `.${escape(`${pseudo}${separator}${className}`)}::${pseudo}`;
             });
           });
-        },
+        }
       );
 
       addVariant('important', ({ container }) => {
@@ -105,38 +105,38 @@ module.exports = {
       addUtilities(
         {
           '.col-span-full': {
-            'grid-column': '1 / -1',
+            'grid-column': '1 / -1'
           },
           '.flex-2': {
-            flex: '2 1 0',
+            flex: '2 1 0'
           },
           '.flex-3': {
-            flex: '3 1 0',
-          },
+            flex: '3 1 0'
+          }
         },
-        ['responsive'],
+        ['responsive']
       );
 
       addUtilities(
         {
           '.hide': {
-            display: 'none',
+            display: 'none'
           },
           '.show': {
-            display: 'block',
-          },
+            display: 'block'
+          }
         },
-        ['responsive', 'important'],
+        ['responsive', 'important']
       );
 
       addUtilities(
         {
           '.empty-content': {
-            content: "''",
-          },
+            content: "''"
+          }
         },
-        ['before'],
+        ['before']
       );
-    }),
+    })
   ]
 };
