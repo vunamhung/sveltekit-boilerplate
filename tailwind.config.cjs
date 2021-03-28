@@ -1,5 +1,5 @@
 const { tailwindExtractor } = require('tailwindcss/lib/lib/purgeUnusedStyles');
-const { spacing } = require('tailwindcss/defaultTheme');
+const { fontFamily, spacing } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: {
@@ -10,12 +10,15 @@ module.exports = {
         // rather than bothering Tailwind Labs about it
         ...tailwindExtractor(content),
         // Match Svelte class: directives (https://github.com/tailwindlabs/tailwindcss/discussions/1731)
-        ...[...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group)
+        ...[...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
       ],
-      keyframes: true
-    }
+      keyframes: true,
+    },
   },
   theme: {
+    fontFamily: {
+      sans: ['Noto Sans', ...fontFamily.sans],
+    },
     extend: {
       container: {
         center: true,
@@ -24,12 +27,12 @@ module.exports = {
           sm: '100%',
           md: '640px',
           lg: '960px',
-          xl: '1220px'
-        }
+          xl: '1220px',
+        },
       },
       screens: {
         dlg: { max: '1023px' },
-        dmd: { max: '767px' }
+        dmd: { max: '767px' },
       },
       maxWidth: {
         'min-content': 'min-content',
@@ -42,7 +45,7 @@ module.exports = {
         '1/5': '20%',
         '2/5': '40%',
         '3/5': '60%',
-        '4/5': '80%'
+        '4/5': '80%',
       },
       maxHeight: {
         '1/2': '50%',
@@ -53,7 +56,7 @@ module.exports = {
         '1/5': '20%',
         '2/5': '40%',
         '3/5': '60%',
-        '4/5': '80%'
+        '4/5': '80%',
       },
       minWidth: {
         'min-content': 'min-content',
@@ -61,7 +64,7 @@ module.exports = {
         '1/4': '25%',
         '1/2': '50%',
         '3/4': '75%',
-        '4/5': '80%'
+        '4/5': '80%',
       },
       minHeight: {
         'min-content': 'min-content',
@@ -69,13 +72,28 @@ module.exports = {
         '1/4': '25vh',
         '1/2': '50vh',
         '3/4': '75vh',
-        '4/5': '80vh'
+        '4/5': '80vh',
       },
       inset: {
         '1/2': '50%',
-        '-1/2': '-50%'
-      }
-    }
+        '-1/2': '-50%',
+      },
+    },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp'), require('@tailwindcss/aspect-ratio')]
+  variants: {
+    extend: {
+      backgroundColor: ['before', 'after'],
+      borderRadius: ['before', 'after'],
+      inset: ['before', 'after'],
+      position: ['before', 'after'],
+      zIndex: ['before', 'after'],
+      backgroundOpacity: ['before', 'after'],
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
+    require('tailwindcss-pseudo-selectors'),
+  ],
 };
