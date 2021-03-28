@@ -34,8 +34,8 @@
   },
   "type": "module",
   "dependencies": {
-    "feather-icons": "^4.28.0",
     "praecox-datepicker": "^1.0.4",
+    "svelte-feather-icons": "^3.3.0",
     "svelte-yup": "^1.0.5",
     "yup": "^0.32.9"
   }
