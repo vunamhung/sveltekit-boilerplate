@@ -1,17 +1,15 @@
 <script>
+  import SvelteSeo from 'svelte-seo';
+  import { FeatherIcon } from 'svelte-feather-icons';
   import Counter from '$lib/Counter.svelte';
-  import {FeatherIcon} from 'svelte-feather-icons';
-
 </script>
 
-<svelte:head>
-  <title>Home</title>
-</svelte:head>
+<SvelteSeo title="Home" />
 
 <main>
   <h1>Hello world!</h1>
 
-  <FeatherIcon class='w-4' />
+  <FeatherIcon class="w-4" />
   <Counter />
 
   <p>Visit <a class="text-blue-600 underline" href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
