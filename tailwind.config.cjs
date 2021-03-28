@@ -80,28 +80,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
-    plugin(({ addVariant, e, addUtilities, theme, prefix, variants }) => {
-      const escape = e || ((x) => x);
-
-      ['after', 'backdrop ', 'before', 'cue', 'first-letter', 'first-line', 'grammar-error ', 'marker ', 'placeholder ', 'selection'].forEach(
-        (pseudo) => {
-          addVariant(pseudo, ({ modifySelectors, separator }) => {
-            modifySelectors(({ className }) => {
-              return `.${escape(`${pseudo}${separator}${className}`)}::${pseudo}`;
-            });
-          });
-        }
-      );
-
-      addVariant('important', ({ container }) => {
-        container.walkRules((rule) => {
-          rule.selector = `.\\!${rule.selector.slice(1)}`;
-          rule.walkDecls((decl) => {
-            decl.important = true;
-          });
-        });
-      });
-
+    plugin(({ addUtilities }) => {
       addUtilities(
         {
           '.col-span-full': {
@@ -115,27 +94,6 @@ module.exports = {
           }
         },
         ['responsive']
-      );
-
-      addUtilities(
-        {
-          '.hide': {
-            display: 'none'
-          },
-          '.show': {
-            display: 'block'
-          }
-        },
-        ['responsive', 'important']
-      );
-
-      addUtilities(
-        {
-          '.empty-content': {
-            content: "''"
-          }
-        },
-        ['before']
       );
     })
   ]
