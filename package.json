@@ -36,6 +36,7 @@
   "type": "module",
   "dependencies": {
     "cookie": "^0.4.1",
+    "felte": "^0.6.0",
     "praecox-datepicker": "^1.0.4",
     "svelte-feather-icons": "^3.3.0",
     "svelte-seo": "^1.1.0",
