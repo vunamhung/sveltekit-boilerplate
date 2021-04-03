@@ -2343,6 +2343,14 @@ ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
   resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
   integrity sha512-q+8UfWDg9Itrg0yWK7oe5p/XRCJpJF9OBtXfOPgSJl+u3Xd5KI328RUEvUqSMVM9CiQUEf1QdBzJMkYGErj9QA==
 
+sswr@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sswr/-/sswr-1.0.1.tgz#085de5bcdacfe707f493b7fcd019f1a8de0190c9"
+  integrity sha512-O7kw/YBQHEtAkzeS1E+4/pFCSLy74ng1c2sjS/wG5LlkH+fSlwMz0Ww1KSE4Q004ulK+mAEmVS9jRDa8ttO1Qg==
+  dependencies:
+    svelte "^3.29.4"
+    swrev "^1.7.0"
+
 stable@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
@@ -2452,7 +2460,7 @@ svelte-yup@^1.0.5:
   resolved "https://registry.yarnpkg.com/svelte-yup/-/svelte-yup-1.0.5.tgz#5f15f5a5f60348bc4fe71d707f5c2f17b9a3afb0"
   integrity sha512-7PDwqk1cAAnrsWimp63oSvHUp2+YcQtLgyqpOlxMRz6fs4dZbR/f8yzrQuL0cyFkUn6eVGvV6lNkflXqTdHjmQ==
 
-svelte@3.37.0:
+svelte@3.37.0, svelte@^3.29.4:
   version "3.37.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.37.0.tgz#dc7cd24bcc275cdb3f8c684ada89e50489144ccd"
   integrity sha512-TRF30F4W4+d+Jr2KzUUL1j8Mrpns/WM/WacxYlo5MMb2E5Qy2Pk1Guj6GylxsW9OnKQl1tnF8q3hG/hQ3h6VUA==
@@ -2483,6 +2491,11 @@ swiper@6.5.3:
   dependencies:
     dom7 "^3.0.0"
     ssr-window "^3.0.0"
+
+swrev@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/swrev/-/swrev-1.7.0.tgz#49db59979e37753637a3bee5657bad3c020a4db0"
+  integrity sha512-zIS4CuyRGXVd7CwQOdzswQHselWmbuHQt5Jn6ckVvFOZXXpnM2Z13UxueYUvDJ+Hlp5Dqi8j5tmxtcuE16YT4w==
 
 table@^6.0.4:
   version "6.0.7"

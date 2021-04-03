@@ -38,6 +38,7 @@
     "cookie": "^0.4.1",
     "felte": "0.6.2",
     "praecox-datepicker": "^1.0.4",
+    "sswr": "^1.0.1",
     "svelte-feather-icons": "^3.3.0",
     "svelte-seo": "^1.1.0",
     "svelte-yup": "^1.0.5",
