@@ -1,9 +1,8 @@
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: {
-    content: ['./src/**/*.{html,js,svelte,ts}'],
-  },
+  mode: process.env.NODE_ENV ? 'jit' : undefined, // This "hack" ensures your IDE detects all normal.
+  purge: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
       sans: ['Noto Sans', ...fontFamily.sans],
