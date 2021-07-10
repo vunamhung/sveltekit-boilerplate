@@ -1,0 +1,8 @@
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  button {
+    @apply focus:outline-none;
+  }
+}

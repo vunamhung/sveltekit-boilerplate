@@ -1,0 +1,11 @@
+@layer components {
+  .button {
+    @apply py-4 px-8 text-red-500 bg-red-500 bg-opacity-10 rounded-full border-2 border-transparent outline-none w-48;
+    &:focus {
+      @apply border-opacity-100;
+    }
+    &:active {
+      @apply bg-red-500 bg-opacity-20;
+    }
+  }
+}

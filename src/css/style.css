@@ -1,0 +1,6 @@
+@import 'tailwindcss/base';
+@import 'base.css';
+@import 'typo.css';
+@import 'button.css';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
