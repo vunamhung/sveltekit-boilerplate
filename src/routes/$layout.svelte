@@ -1,8 +1,9 @@
-<script context='module'>
+<script context="module">
   export const load = ({ page }) => ({ props: { page } });
 </script>
+
 <script>
-  import '../css/style.css';
+  import '../style.css';
 
   export let page;
 </script>

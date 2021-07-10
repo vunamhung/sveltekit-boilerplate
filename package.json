@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "dev:css": "NODE_ENV=development tailwind -i ./src/css/style.css -o ./src/style.css -c ./tailwind.config.cjs --watch --postcss",
     "dev": "TAILWIND_MODE=watch svelte-kit dev",
+    "prebuild": "NODE_ENV=production tailwind -i ./src/css/style.css -o ./src/style.css -c ./tailwind.config.cjs --postcss",
     "build": "svelte-kit build",
     "start": "svelte-kit start",
     "lint": "prettier --check . && eslint .",

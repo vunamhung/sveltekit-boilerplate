@@ -8,24 +8,24 @@ module.exports = {
   preprocess: [
     sveltePreprocess({
       defaults: {
-        style: 'postcss'
+        style: 'postcss',
       },
-      postcss: true
-    })
+      postcss: true,
+    }),
   ],
   kit: {
     adapter: vercel(),
     target: '#svelte', // hydrate the <div id="svelte"> element in src/app.html
     vite: {
       ssr: {
-        noExternal: Object.keys(pkg.dependencies || {})
+        noExternal: Object.keys(pkg.dependencies || {}),
       },
       resolve: {
         alias: {
           $components: resolve(__dirname, './src/components'),
-          $stores: resolve(__dirname, './src/stores')
-        }
-      }
-    }
-  }
+          $stores: resolve(__dirname, './src/stores'),
+        },
+      },
+    },
+  },
 };
