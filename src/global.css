@@ -34,15 +34,13 @@
 }
 
 @layer components {
-  .overlay {
-    @apply before:empty-content before:rounded-xl before:bg-black before:inset-0 before:absolute before:bg-opacity-50;
-  }
-}
-
-@layer utilities {
-  @variants before, after {
-    .empty-content {
-      content: '';
+  .button {
+    @apply py-4 px-8 text-red-500 bg-red-500 bg-opacity-10 rounded-full border-2 border-transparent outline-none w-48;
+    &:focus {
+      @apply border-opacity-100;
+    }
+    &:active {
+      @apply bg-red-500 bg-opacity-20;
     }
   }
 }
