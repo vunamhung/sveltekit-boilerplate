@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import '../style.css';
+  import '../css/style.css';
 
   export let page;
 </script>
